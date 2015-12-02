@@ -1,3 +1,7 @@
+== 2.3 - 2015/12/02
+
+* Added support for showing foreign keys
+
 == 2.2 - 2015/05/21
 
 * Added support to turn off annotations for serializers and factories
