@@ -15,8 +15,7 @@ Gem::Specification.new do |s|
 
   s.post_install_message = %Q(** guard-annotate is looking for maintainers. While I am still trying
   to accept and stay on top of new Pull Requests, I no longer personally actively use this guard
-  plugin.  If you are interested in becoming a maintainer please contact me via GitHub Issues at
-  https://github.com/guard/guard-annotate. **)
+  plugin.  If you are interested in becoming a maintainer please contact me via email at cpjolicoeur@gmail.com. **)
 
   s.rubyforge_project = "guard-annotate"
 
@@ -25,8 +24,8 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'bundler', '~> 1.6'
 
-  s.files = Dir.glob('{lib}/**/*') + %w[LICENSE README.rdoc]
+  s.files = Dir.glob('{lib}/**/*') + %w[LICENSE README.md]
   s.require_paths = ["lib"]
 
-  s.rdoc_options = ["--charset=UTF-8", "--main=README.rdoc", "--exclude='(lib|test|spec)|(Gem|Guard|Rake)file'"]
+  s.rdoc_options = ["--charset=UTF-8", "--main=README.md", "--exclude='(lib|test|spec)|(Gem|Guard|Rake)file'"]
 end
