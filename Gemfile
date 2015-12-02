@@ -4,11 +4,11 @@ source "http://rubygems.org"
 gemspec development_group: :gem_build_tools
 
 group :gem_build_tools do
-  gem 'rake', '~> 0.9.2.2'
+  gem 'rake'
 end
 
 group :development do
-  gem 'guard-rspec', '~> 0.6.0'
+  gem 'guard-rspec', require: false
 end
 
 group :test do
