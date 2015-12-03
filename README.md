@@ -4,6 +4,8 @@
 
 # Guard::Annotate
 
+[![Build Status](https://travis-ci.org/guard/guard-annotate.svg?branch=master)](https://travis-ci.org/guard/guard-annotate)
+
 Annotate guard runs the annotate gem when needed
 
 - Compatible with Annotate 2.4.x
