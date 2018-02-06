@@ -117,6 +117,18 @@ RSpec.describe Guard::Annotate do
       end
     end
 
+    describe "classified sorting of columns" do
+      it "should not sort columns by name by default" do
+        expect(subject.options[:classified_sort]).to be_falsey
+      end
+
+      it "should allow user to sort columns by name if desired" do
+        subject = Guard::Annotate.new(:classified_sort => true)
+        expect(subject).to receive(:system).with("bundle exec annotate --exclude tests,fixtures -p before --classified-sort")
+        subject.start
+      end
+    end
+
     describe "indexes" do
       it "should not add indexes to annotations by default" do
         expect(subject.options[:show_indexes]).to be_falsey

@@ -15,6 +15,7 @@ module Guard
       options[:tests] = false if options[:tests].nil?
       options[:factories] = true if options[:factories].nil?
       options[:serializers] = true if options[:serializers].nil?
+      options[:classified_sort] = false if options[:classified_sort].nil?
       options[:sort] = false if options[:sort].nil?
       options[:routes] = false if options[:routes].nil?
       options[:run_at_start] = true if options[:run_at_start].nil?
@@ -73,6 +74,10 @@ module Guard
       options[:sort]
     end
 
+    def annotate_classified_sort_columns?
+      options[:classified_sort]
+    end
+
     def show_indexes?
       options[:show_indexes]
     end
@@ -92,7 +97,7 @@ module Guard
     def show_migration?
       options[:show_migration]
     end
-    
+
     def show_foreign_keys?
       options[:show_foreign_keys]
     end
@@ -104,6 +109,7 @@ module Guard
 
       annotate_models_command = "bundle exec annotate #{annotate_excludes} -p #{annotation_position}"
       annotate_models_options += ' --sort' if annotate_sort_columns?
+      annotate_models_options += ' --classified-sort' if annotate_classified_sort_columns?
       annotate_models_options += ' --show-indexes' if show_indexes?
       annotate_models_options += ' --simple-indexes' if simple_indexes?
       annotate_models_options += ' --show-migration' if show_migration?
